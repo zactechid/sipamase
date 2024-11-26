@@ -136,30 +136,30 @@
                                             <td><p class="badge badge-danger">Belum ada dokumen</p></td>
                                         @elseif($item->surat_pemda_id !== null)
                                             <td>
-                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ $item->surat_pemda->docx1 }}" target="_blank">Surat Permohonan. <i class="fas fa-download"></i></a>
-                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ $item->surat_pemda->docx2 }}" target="_blank">NA. <i class="fas fa-download"></i></a>
-                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ $item->surat_pemda->docx3 }}" target="_blank">SK Tim. <i class="fas fa-download"></i></a>
-                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ $item->surat_pemda->docx4 }}" target="_blank">DRAFT RANPERDA (PDF). <i class="fas fa-download"></i></a>
-                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ $item->surat_pemda->docx5 }}" target="_blank">DRAFT RANPERDA (DOC). <i class="fas fa-download"></i></a>
-                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ $item->surat_pemda->docx6 }}" target="_blank">SK Propemperda/SK Bersama jika di Luar. <i class="fas fa-download"></i></a>
+                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{  isset($item->surat_pemda->docx1) ? $item->surat_pemda->docx1 : '' }}" target="_blank">Surat Permohonan. <i class="fas fa-download"></i></a>
+                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ isset($item->surat_pemda->docx2) ? $item->surat_pemda->docx2 : '' }}" target="_blank">NA. <i class="fas fa-download"></i></a>
+                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ isset($item->surat_pemda->docx3) ? $item->surat_pemda->docx3 : ''  }}" target="_blank">SK Tim. <i class="fas fa-download"></i></a>
+                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ isset($item->surat_pemda->docx4) ? $item->surat_pemda->docx4 : '' }}" target="_blank">DRAFT RANPERDA (PDF). <i class="fas fa-download"></i></a>
+                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ isset($item->surat_pemda->docx5) ? $item->surat_pemda->docx5 : '' }}" target="_blank">DRAFT RANPERDA (DOC). <i class="fas fa-download"></i></a>
+                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ isset($item->surat_pemda->docx6) ? $item->surat_pemda->docx6 : '' }}" target="_blank">SK Propemperda/SK Bersama jika di Luar. <i class="fas fa-download"></i></a>
                                             </td>
                                         @elseif($item->surat_dprd_id !== null)
                                             <td>
-                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ $item->surat_dprd->docx1 }}" target="_blank">Surat Permohonan. <i class="fas fa-download"></i></a>
-                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ $item->surat_dprd->docx2 }}" target="_blank">NA. <i class="fas fa-download"></i></a>
-                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ $item->surat_dprd->docx3 }}" target="_blank">DRAFT RANPERDA. <i class="fas fa-download"></i></a>
-                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ $item->surat_dprd->docx4 }}" target="_blank">SK Propemperda. <i class="fas fa-download"></i></a>
+                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ isset($item->surat_dprd->docx1) ? $item->surat_dprd->docx1 : '' }}" target="_blank">Surat Permohonan. <i class="fas fa-download"></i></a>
+                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ isset($item->surat_dprd->docx2) ? $item->surat_dprd->docx2 : '' }}" target="_blank">NA. <i class="fas fa-download"></i></a>
+                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ isset($item->surat_dprd->docx3) ? $item->surat_dprd->docx3 : '' }}" target="_blank">DRAFT RANPERDA. <i class="fas fa-download"></i></a>
+                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ isset($item->surat_dprd->docx4) ? $item->surat_dprd->docx4 : '' }}" target="_blank">SK Propemperda. <i class="fas fa-download"></i></a>
                                             </td>
                                         @elseif($item->surat_rperkada_id !== null)
                                             <td>
-                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ $item->surat_rperkada->docx1 }}" target="_blank">Surat Permohonan. <i class="fas fa-download"></i></a>
-                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ $item->surat_rperkada->docx2 }}" target="_blank">Penjelasan/Keterangan. <i class="fas fa-download"></i></a>
-                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ $item->surat_rperkada->docx3 }}" target="_blank">DRAFT RANPERKADA. <i class="fas fa-download"></i></a>
+                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ isset($item->surat_rperkada->docx1) ? $item->surat_rperkada->docx1 : '' }}" target="_blank">Surat Permohonan. <i class="fas fa-download"></i></a>
+                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ isset($item->surat_rperkada->docx2) ? $item->surat_rperkada->docx2 : '' }}" target="_blank">Penjelasan/Keterangan. <i class="fas fa-download"></i></a>
+                                                <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ isset($item->surat_rperkada->docx3) ? $item->surat_rperkada->docx3 : '' }}" target="_blank">DRAFT RANPERKADA. <i class="fas fa-download"></i></a>
                                             </td>
                                         @endif
 
                                         {{-- dokumen lpa/ak --}}
-                                        @if ($item->doc_administrasi->docx1 == null && $item->doc_administrasi->docx2 == null && $item->doc_administrasi->docx3 == null && $item->doc_administrasi->docx4 == null && $item->doc_administrasi->docx5 == null)
+                                        @if (empty($item->doc_administrasi) || ($item->doc_administrasi->docx1 == null && $item->doc_administrasi->docx2 == null && $item->doc_administrasi->docx3 == null && $item->doc_administrasi->docx4 == null && $item->doc_administrasi->docx5 == null))
                                             <td><p class="badge badge-danger">Belum ada dokumen</p></td>
                                         @else
                                             <td>
@@ -204,7 +204,7 @@
                                         @if ($item->user)
                                         <td>{{ isset($item->pdraf->nama) ? $item->pdraf->nama : '' }}</td>
                                         @endif
-                                        <td>{{ $item->doc_administrasi->keterangan }}</td>
+                                        <td>{{ isset($item->doc_administrasi->keterangan) ? $item->doc_administrasi->keterangan : '' }}</td>
                                         <td class="text-center">
                                             <a href="/administrasi/{{ $item->judul }}" class="badge badge-info mb-2" style="cursor: pointer;"><i class="fas fa-edit"></i> Edit</a> <br>
                                             <a href="/pengajuan/destroy/{{ $item->judul }}" onclick="return confirm('Yakin ingin menghapus data ini?')" class="badge badge-danger"><i class="fas fa-trash"></i> Hapus</a>
