@@ -190,7 +190,7 @@
                                             <td><p class="badge badge-danger">Belum ada dokumen</p></td>
                                         @else
                                             <td>
-                                                @if ($item->doc_administrasi->docx1 !== null)
+                                                @if (isset($item->doc_administrasi->docx1) && $item->doc_administrasi->docx1 !== null)
                                                     <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ $item->doc_administrasi->docx1 }}" target="_blank">Dokumen LPA/AK. <i class="fas fa-download"></i></a>
                                                 @else
                                                     <a class="badge badge-danger mr-2 mt-1 p-1" target="_blank"> Belum ada dokumen</a>
@@ -198,7 +198,7 @@
 
                                                 @if ($item->doc_rapat_id == null)
                                                     <a class="badge badge-danger mr-2 mt-1 p-1" target="_blank"> Belum ada dokumen</a>
-                                                @elseif($item->doc_rapat->docx1 !== null)
+                                                @elseif (isset($item->doc_rapat->docx1) && $item->doc_rapat->docx1 !== null)
                                                     <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ $item->doc_rapat->docx1 }}" target="_blank">Dokumen Kegiatan. <i class="fas fa-download"></i></a>
                                                 @else
                                                     <a class="badge badge-danger mr-2 mt-1 p-1" target="_blank"> Belum ada dokumen</a>
@@ -206,7 +206,7 @@
 
                                                 @if ($item->doc_penyampaian_id == null)
                                                     <a class="badge badge-danger mr-2 mt-1 p-1" target="_blank"> Belum ada dokumen</a>
-                                                @elseif($item->doc_penyampaian->docx1 !== null)
+                                                @elseif (isset($item->doc_penyampaian->docx1) && $item->doc_penyampaian->docx1 !== null)
                                                     <a class="badge badge-info mr-2 mt-1 p-1" href="{{ secure_url('storage') }}/{{ $item->doc_penyampaian->docx1 }}" target="_blank">Dokumen Penyampaian. <i class="fas fa-download"></i></a>
                                                 @else
                                                     <a class="badge badge-danger mr-2 mt-1 p-1" target="_blank"> Belum ada dokumen</a>
